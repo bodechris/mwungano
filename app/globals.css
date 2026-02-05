@@ -19,8 +19,329 @@
   }
 }
 
+:root {
+  /* =====================================
+     MWUNGANO BRAND COLORS
+  ===================================== */
+
+  /* Core Dark Scale */
+  --mw-color-black: #0e1626;        /* Deep Navy / Primary Dark */
+  --mw-color-black-0: #151f33;
+  --mw-color-black-1: #1c2942;
+  --mw-color-black-2: #26365a;
+  --mw-color-black-3: #334a78;
+  --mw-color-black-4: #4f6694;
+  --mw-color-black-5: #7b8db3;
+
+  /* Core Light Scale */
+  --mw-color-white: #ffffff;
+  --mw-color-white-0: #f4f6f8;
+  --mw-color-white-1: #e6eaef;
+  --mw-color-white-2: #d4dae2;
+  --mw-color-white-3: #bcc5d1;
+  --mw-color-white-4: #9aa6b5;
+  --mw-color-white-5: #7b8898;
+
+  /* Brand Accent Colors */
+  --mw-color-primary: #006f87;      /* Mwungano Teal */
+  --mw-color-primary-0: #0a8ea8;
+  --mw-color-primary-1: #3aa9be;
+  --mw-color-primary-2: #6fc4d2;
+  --mw-color-primary-3: #a6dee6;
+
+  --mw-color-secondary: #2a0f45;    /* Deep Purple */
+  --mw-color-secondary-0: #3a185f;
+  --mw-color-secondary-1: #52307c;
+  --mw-color-secondary-2: #7b5aa3;
+  --mw-color-secondary-3: #a58cc4;
+
+  --mw-color-accent: #3192a8;       /* Cyan / Digital Accent */
+  --mw-color-accent-soft: #7f8fa8;  /* Lavender Grey */
+
+  /* Semantic Usage */
+  --mw-color-trust: #006f87;        /* Stability & Trust */
+  --mw-color-innovation: #3192a8;   /* Digital / Media */
+  --mw-color-depth: #0e1626;        /* Authority & Seriousness */
+
+  /* =====================================
+     MWUNGANO BRAND TYPOGRAPHY
+  ===================================== */
+
+  /* Font Families */
+  --mw-font-family-primary: 'Poppins', system-ui, sans-serif;
+  --mw-font-family-secondary: 'Poppins', system-ui, sans-serif;
+
+  /* Font Weights */
+  --mw-font-weight-light: 300;
+  --mw-font-weight-regular: 400;
+  --mw-font-weight-medium: 500;
+  --mw-font-weight-bold: 700;
+  --mw-font-weight-black: 900;
+
+  /* Responsive Font Sizes */
+  --mw-font-size-xxx-small: clamp(10px, 0.8vw, 11px);
+  --mw-font-size-xx-small: clamp(11px, 0.9vw, 12px);
+  --mw-font-size-x-small: clamp(12px, 1vw, 13px);
+  --mw-font-size-small: clamp(13px, 1.2vw, 14px);
+  --mw-font-size-regular: clamp(14px, 1.4vw, 16px);
+  --mw-font-size-medium: clamp(16px, 1.8vw, 18px);
+  --mw-font-size-large: clamp(18px, 2.4vw, 22px);
+  --mw-font-size-x-large: clamp(22px, 3vw, 28px);
+  --mw-font-size-xx-large: clamp(28px, 4vw, 36px);
+  --mw-font-size-xxx-large: clamp(34px, 5vw, 48px);
+
+  /* Line Heights */
+  --mw-line-height-tight: 1.1;
+  --mw-line-height-regular: 1.5;
+  --mw-line-height-loose: 1.8;
+
+  /* =====================================
+     MWUNGANO Z-INDEX SCALE
+  ===================================== */
+
+  --mw-z-index-base: 0;
+  --mw-z-index-background: -1;
+  --mw-z-index-header: 1000;
+  --mw-z-index-overlay: 1100;
+  --mw-z-index-modal: 1200;
+  --mw-z-index-toast: 1300;
+
+  /* =====================================
+     LAYOUT & GLOBALS
+  ===================================== */
+
+  --mw-container-width: 90%;
+  --mw-container-width-mobile: 95%;
+  --mw-border-radius-small: 6px;
+  --mw-border-radius-medium: 12px;
+  --mw-border-radius-large: 20px;
+}
+
+/* ============================
+   GLOBAL ELEMENT DEFAULTS
+============================ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  font-family: var(--mw-font-family-primary);
+  /* background: var(--mw-color-white-0) !important; */
+  background: #fff !important;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================
+   LINKS
+============================ */
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--mw-color-black-4);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--mw-color-white);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* If you still want "inherit color links" globally (like your second a{} block),
+   keep this BELOW the above OR delete one of them to avoid overriding. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================
+   SELECTION (ON BRAND)
+   Option A: Teal background + white text
+============================ */
+
+::selection {
+  color: var(--mw-color-white);
+  background: var(--mw-color-primary) !important;
+}
+::-moz-selection {
+  color: var(--mw-color-white);
+  background: var(--mw-color-primary) !important;
+}
+
+/* Optional: if you prefer Dark background + Teal text (more “executive” look)
+   comment Option A above and use this instead:
+
+::selection {
+  color: var(--mw-color-primary);
+  background: var(--mw-color-black) !important;
+}
+::-moz-selection {
+  color: var(--mw-color-primary);
+  background: var(--mw-color-black) !important;
+}
+*/
+
+/* ============================
+   DISABLED BUTTONS
+============================ */
+
+button[disabled] {
+  background: var(--mw-color-black-5);
+  color: var(--mw-color-white);
+  cursor: not-allowed;
+}
+
+/* ============================
+   CLOSE BUTTONS
+============================ */
+
+[class*="close-"] {
+  color: var(--mw-color-black-5);
+  font: 3em/120% arial, sans-serif;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
+  text-align: center;
+
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.close-classic:after { content: "X"; }
+.close-thin:after { content: "×"; }
+.close-thin-1:after { content: "╳"; }
+.close-thin-2:after { content: "☓"; }
+.close-thin-3:after { content: "✕"; }
+.close-thin-4:after { content: "✖"; }
+
+.close-thik:after { content: "✖"; }
+
+.close:hover {
+  color: var(--mw-color-white);
+}
+
+/* ============================
+   HELPERS
+============================ */
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.no-shadow,
+.no-shadow * {
+  box-shadow: none !important;
+}
+
+/* ============================
+   PLACEHOLDERS (kept like yours)
+============================ */
+
+::placeholder {
+  /* add placeholder styling if needed */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+}
+
+/* ============================
+   MWUNGANO LINK BUTTON STYLES
+   (formerly bx-link__text-icon_filled*)
+============================ */
+
+.mw-link__text-icon_filled,
+.mw-link__text-icon_filled-primary {
+  padding: 0.5rem 1rem;
+  top: -5px;
+  border: 0.5px solid var(--mw-color-black-1);
+  background: var(--mw-color-black-1);
+  color: var(--mw-color-white-1) !important;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.mw-link__text-icon_filled svg,
+.mw-link__text-icon_filled-primary svg {
+  min-width: 15px;
+  flex-basis: 15px;
+  height: auto;
+  fill: var(--mw-color-white-1) !important;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Default hover (go light) */
+.mw-link__text-icon_filled:hover {
+  background: var(--mw-color-white);
+  color: var(--mw-color-black-1) !important;
+  border: 0.5px solid var(--mw-color-white-1);
+}
+
+.mw-link__text-icon_filled:hover svg {
+  fill: var(--mw-color-black-1) !important;
+}
+
+/* Primary hover (go teal / brand) */
+.mw-link__text-icon_filled-primary:hover {
+  background: var(--mw-color-primary);
+  color: var(--mw-color-white) !important;
+  border: 0.5px solid var(--mw-color-primary);
+}
+
+.mw-link__text-icon_filled-primary:hover svg {
+  fill: var(--mw-color-white) !important;
+}
+
+
+.transition-overlay {
+  pointer-events: none;
+}
+
+.transition-overlay.is-active {
+  pointer-events: auto;
 }
