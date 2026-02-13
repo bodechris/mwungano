@@ -1,6 +1,6 @@
 'use client';
 
-import { useGlobalAppStates } from '@/context/GlobalAppProvider';
+import { useGlobalAppFuncs, useGlobalAppStates } from '@/context/GlobalAppProvider';
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
 
@@ -10,7 +10,8 @@ import gsap from "gsap";
 gsap.registerPlugin(useGSAP); // register any plugins, including the useGSAP hook
 
 function SiteIntroV0() {
-    const { playIntro } = useGlobalAppStates();
+    const { playIntro, showMenu } = useGlobalAppStates();
+    const { setShowMenu } = useGlobalAppFuncs();
 
     const introRef = useRef<HTMLDivElement>(null);
     const tl = useRef<gsap.core.Timeline | null>(null);
@@ -21,18 +22,37 @@ function SiteIntroV0() {
 
         tl.current = gsap
         .timeline()
-        .set(".content .intro-logo", { y: 20 })
+        // .set(".content .intro-logo", { y: 20 })
         .fromTo(".content .intro-logo .logo-mark", { y: 100, opacity: 0, clipPath: "inset(100% 0% 0% 0%)", }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }) 
         .fromTo( ".content .intro-logo .logo-text", { y: -50, opacity: 0, clipPath: "inset(0% 0% 100% 0%)" }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }, "-=0.9" )
         .to( ".content .intro-logo", { y: 0, duration: 0.8, ease: "power4.inOut", delay: 0.3 } )
-        .fromTo( ".content .into-logo-text", { y: -20, opacity: 0, clipPath: "inset(0% 0% 100% 0%)" }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }, "-=0.6" )
+        // .fromTo( ".content .into-logo-text", { y: -20, opacity: 0, clipPath: "inset(0% 0% 100% 0%)" }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }, "-=0.6" )
         .fromTo( introRef.current, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8, duration: 1.2, ease: "power4.inOut", delay: 1.0, onComplete: () => {
             // done intro
             introRef.current?.style.setProperty("display", "none");
+
+            if( showMenu ) setShowMenu?.(false);
         } } )
         ;
 
     }, { dependencies: [playIntro], scope: introRef });
+    // useGSAP(() => {
+    //     if( !introRef.current || !playIntro) return;
+
+    //     tl.current = gsap
+    //     .timeline()
+    //     .set(".content .intro-logo", { y: 20 })
+    //     .fromTo(".content .intro-logo .logo-mark", { y: 100, opacity: 0, clipPath: "inset(100% 0% 0% 0%)", }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }) 
+    //     .fromTo( ".content .intro-logo .logo-text", { y: -50, opacity: 0, clipPath: "inset(0% 0% 100% 0%)" }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }, "-=0.9" )
+    //     .to( ".content .intro-logo", { y: 0, duration: 0.8, ease: "power4.inOut", delay: 0.3 } )
+    //     .fromTo( ".content .into-logo-text", { y: -20, opacity: 0, clipPath: "inset(0% 0% 100% 0%)" }, { y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)", duration: 1.1, ease: "power4.out" }, "-=0.6" )
+    //     .fromTo( introRef.current, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.8, duration: 1.2, ease: "power4.inOut", delay: 1.0, onComplete: () => {
+    //         // done intro
+    //         introRef.current?.style.setProperty("display", "none");
+    //     } } )
+    //     ;
+
+    // }, { dependencies: [playIntro], scope: introRef });
 
 
     if( !playIntro ) return null;
@@ -60,9 +80,9 @@ function SiteIntroV0() {
                     </g>
                 </svg>
             </div>
-            <div className="into-logo-text">
+            {/* <div className="into-logo-text">
                 consultancy
-            </div>
+            </div> */}
         </div>
     </SiteIntroV0Wrapper>
   )

@@ -74,6 +74,8 @@ export default function PageTransitionProvider({
 
     setIsTransitioning(true);
 
+    // console.log("Starting page transition animation. pendingHref:", pendingHrefRef.current, "showMenu:", showMenu);
+
     // close any open menus, etc. here if needed
     if( showMenu ) setShowMenu?.(false);
 
@@ -106,7 +108,7 @@ export default function PageTransitionProvider({
     return () => {
       tl.kill();
     };
-  }, [prev]);
+  }, [prev, showMenu]);
 
   const navigate = useCallback(
     (href: string) => {

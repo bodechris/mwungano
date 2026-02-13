@@ -4,8 +4,11 @@ import React from 'react'
 function page() {
   return (
     <PageLayoutV0>
-      <h1>Our Core Services</h1>
-      <h2>What we do</h2>
+      <div className="sect-page-header">
+        <h1>Our Core Services</h1>
+        <h2>What we do.</h2>
+        <p>Integrated Communications. Strategic Influence. Measurable Impact.</p>
+      </div>
     </PageLayoutV0>
   )
 }

@@ -1,5 +1,6 @@
 const KEY = "mwungano:lastIntroAt";
-const DAY_MS = 24 * 60 * 60 * 1000;
+const DAY_MS = 7 *24 * 60 * 60 * 1000; // 7 days
+// const DAY_MS = 60 * 1000;
 
 export function shouldPlayIntro(now = Date.now()): boolean {
   if (typeof window === "undefined") return false;

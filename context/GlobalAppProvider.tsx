@@ -1,5 +1,7 @@
 'use client';
 import { useContext, createContext, Dispatch, SetStateAction, useState, useRef, RefObject, useEffect } from 'react';
+import { usePathname } from "next/navigation";
+import { shouldPlayIntro, markIntroPlayed } from '@/lib/utils';
 
 type GlobalAppStatesType = {
     colors: string[];    
@@ -34,18 +36,42 @@ type GlobalAppProviderProps = {
 }
 function GlobalAppProvider({ children }: GlobalAppProviderProps) {
     const [colors, setColors] = useState<string[]>(["#1ce0d4", "#5f01d1", "#39106a", "#fff", "#000"]);
-    const [playIntro, setPlayIntro] = useState<boolean>(true);
-    const PLAYINTRO_DURATION = 6000; // milliseconds
+    const [playIntro, setPlayIntro] = useState<boolean>(false);
+    const PLAYINTRO_DURATION = 5000; // milliseconds
 
     const [showMenu, setShowMenu] = useState<boolean>(false);
 
+    const pathname = usePathname();
+    const runningRef = useRef(false);
+
+    const maybePlay = async () => {
+      if (runningRef.current) return;
+      if (!shouldPlayIntro()) return;
+
+      runningRef.current = true;
+      try {
+        setPlayIntro(true);
+        markIntroPlayed();
+      } finally {
+        runningRef.current = false;
+      }
+    };
+
+    // ✅ Runs on page transitions (route changes)
+    useEffect(() => {
+      maybePlay();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [pathname]);
+
+
+
     // on mount
     useEffect(() => {
-        // start intro
+        if( !playIntro ) return;
         setTimeout(() => {
             setPlayIntro(false);
         }, PLAYINTRO_DURATION);
-    }, []);
+    }, [playIntro]);
 
     useEffect(() => {
         // lock scroll when menu is open
