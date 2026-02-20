@@ -13,7 +13,7 @@ export default function Home() {
           <div className="sect page-sect-2 reverse">
             <div className="sub-sect">
               <h2>A Pan-African Consultancy Built on Alliance</h2>
-              <p>Derived from the Swahili word for Alliance, Mwungano brings together strategic communications, ESG expertise, and deep African market insight to help organisations build reputations that endure. We operate through a trusted network across Africa and globally, enabling us to deliver locally grounded, internationally credible work.</p>
+              <p>Derived from the Swahili word for Alliance, Mwungano brings together strategic communications, and deep African market insight to help organisations build reputations that endure. We operate through a trusted network across Africa and globally, enabling us to deliver locally grounded, internationally credible work.</p>
               <TransitionLink href="/about" className="cta-with-shadow-1">About Mwungano</TransitionLink>
             </div>          
             <div className="sub-sect">
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div className="sub-sect">
               <h2>Integrated Communications That Shape Perception</h2>
-              <p>From brand and communications strategy to media relations, crisis communications, ESG storytelling, and investor communications, we design integrated solutions that deliver clarity, credibility, and impact at every stakeholder touchpoint.</p>
+              <p>From brand and communications strategy to media relations, crisis communications,and investor communications, we design integrated solutions that deliver clarity, credibility, and impact at every stakeholder touchpoint.</p>
               <TransitionLink href="/services" className="cta-with-shadow-1">Explore Our Services</TransitionLink>
             </div> 
           </div>
@@ -43,7 +43,7 @@ export default function Home() {
           <div className="sect page-sect-2">
             <div className="sub-sect">
               <h2>Purpose-Led. ESG-Focused. Impact-Driven.</h2>
-              <p>Corporate purpose is more than reporting — it is how organisations act, communicate, and lead. We help clients articulate credible ESG and sustainability narratives that align performance, responsibility, and long-term value creation.</p>
+              <p>Corporate purpose is more than reporting — it is how organisations act, communicate, and lead. We help clients articulate credible and sustainability narratives that align performance, responsibility, and long-term value creation.</p>
               <TransitionLink href="/about" className="cta-with-shadow-1">Our ESG & Sustainability Approach</TransitionLink>
             </div>          
             <div className="sub-sect">
