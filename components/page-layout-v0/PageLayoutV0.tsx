@@ -36,7 +36,7 @@ const PageLayoutV0Wrapper = styled.div`
 
     h1 {
       width: max-content !important;
-      color: #eee;
+      color: #eee !important;
       background: var(--mw-color-primary);
       position: relative;
       font-weight: 600;
