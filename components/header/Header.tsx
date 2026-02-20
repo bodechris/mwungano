@@ -134,6 +134,7 @@ export const MainSiteHeader = styled.header`
         svg {
             width: 100%;
             height: auto;
+            fill: var(--mw-color-primary);
         }
     }
 
@@ -156,6 +157,7 @@ export const MainSiteHeader = styled.header`
             width: 100%;
             height: auto;
             position: relative;
+            fill: var(--mw-color-primary);
 
             rect {
                 transform-origin: right center;

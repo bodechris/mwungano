@@ -116,7 +116,6 @@ const SiteIntroV0Wrapper = styled.div`
 
             svg {
                 fill: var(--mw-color-primary);
-                fill: #222;
                 width: 100%;
                 height: auto;
                 position: relative;

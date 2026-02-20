@@ -7,15 +7,17 @@ function HeroSliderV0() {
   const slides = [
     {
       title: "Shaping Reputations That <b>Move Africa Forward</b>",
-      description: "We help organisations build trust, credibility, and influence across Africa through strategic communications, ESG storytelling, and purpose-led reputation management.",
-      cta: "Discover How We Work",
-      ctaurl: "/get-started",
+      description: "Mwungano is a Black woman-led pan-African communications consultancy built to help organisations earn trust, protect credibility, and lead conversations across Anglophone, Francophone, and Lusophone markets.",
+      cta: "Explore Our Services",
+      cta2: "",
+      ctaurl: "/services",
       mediasrc: "/images/skylines-1.webp"
     },
     {
       title: "<b>Deep African Insight.</b> Global Standards.",
       description: "With operations across Anglophone, Francophone, and Lusophone markets, Mwungano helps organisations navigate complexity and succeed across diverse African landscapes.",
       cta: "Explore Our Footprint",
+      cta2: "Learn More About Our Approach",
       ctaurl: "/work",
       mediasrc: "/images/slide-2.webp"
     },
@@ -131,9 +133,9 @@ const HeroSliderV0Wrapper = styled.div`
           width: max-content;
           height: auto;
           padding: 10px 20px;
-          border: 2px solid #222;
+          border: 2px solid var(--mw-color-primary);
           background: #fff;
-          color: #222;
+          color: var(--mw-color-primary);
 
           font-size: var(--mw-font-size-large);
           font-weight: 800;
@@ -148,8 +150,8 @@ const HeroSliderV0Wrapper = styled.div`
           transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
           &:hover {
-            background: #222;
-            color: #f7f7f7;
+            background: var(--mw-color-primary);
+            color: var(--mw-color-white);
 
             -webkit-box-shadow: 20px 20px 5px 2px rgba(0,0,0,0.08);
             -moz-box-shadow:    20px 20px 5px 2px rgba(0,0,0,0.08);
@@ -161,7 +163,7 @@ const HeroSliderV0Wrapper = styled.div`
         height: 100%;
         overflow: hidden;
 
-        background: var( --mw-color-primary );
+        background: var(--mw-color-primary);
         z-index: 0;
 
         img {

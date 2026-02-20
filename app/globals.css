@@ -42,7 +42,7 @@
   --mw-color-white-4: #9aa6b5;
   --mw-color-white-5: #7b8898;
 
-  /* Brand Accent Colors */
+  /* Brand Accent Colors 01698c */
   --mw-color-primary: #006f87;      /* Mwungano Teal */
   --mw-color-primary-0: #0a8ea8;
   --mw-color-primary-1: #3aa9be;
@@ -344,4 +344,9 @@ button[disabled] {
 
 .transition-overlay.is-active {
   pointer-events: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mw-color-primary) !important;
 }
