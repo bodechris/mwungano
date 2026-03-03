@@ -374,6 +374,16 @@ const PageLayoutV0Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 
+    .header-sect-1 {
+      width: min(800px, 100%);
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    
+
     .sub-sect {
       flex: 1;
       flex-direction: column;
@@ -452,6 +462,59 @@ const PageLayoutV0Wrapper = styled.div`
       
     
     
+  }
+
+  .content-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .sub-sect {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .img-media-1 {
+        width: 100%;
+        height: 650px;
+        display: block;
+        position: relative;
+        background: #eee;
+        margin-bottom: 2rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 1rem;
+        
+        font-weight: 300;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+
+        p{ 
+          color: #222;
+          font-weight: 400;
+          font-size: clamp(10px, 2vw, 16px); 
+        }
+      }
+    }
   }
 
 

@@ -41,21 +41,52 @@ export default function Home() {
 
         <PageLayoutV0>
           <div className="sect page-sect-2">
+            <div className="header-sect-1">
+              <h2>Purpose-led Communications</h2>
+              <p>Corporate purpose is about both the numbers and the narrative. We help clients to succeed with outstanding communications advice and 
+  expertise, articulated with  purpose, authentically and consistently to engage stakeholders to achieve greater impact. We do it with 
+  excellence, understanding and integrity. Our integrated communications expertise is grounded in our core values and singular service ethos.</p>
+            </div>
+          </div>
+          <div className="sect page-sect-2 content-grid-1">        
             <div className="sub-sect">
-              <h2>Purpose-Led. ESG-Focused. Impact-Driven.</h2>
-              <p>Corporate purpose is more than reporting — it is how organisations act, communicate, and lead. We help clients articulate credible and sustainability narratives that align performance, responsibility, and long-term value creation.</p>
-              <TransitionLink href="/about" className="cta-with-shadow-1">Our ESG & Sustainability Approach</TransitionLink>
-            </div>          
+              <h3>Excellence</h3>
+              <div className="img-media-1">
+                <Image src="/images/teams-2.webp" alt="Excellence" width={1000} height={500} />
+              </div>
+              <div className="content">
+                <p>High-quality strategic  thinking, passion, creativity and insight to deliver all of our communications and digital marketing programmes.</p>
+                <p>We maintain a relentless focus on delivering the best possible results for our clients,rooted in data and benchmarked  against agreed objectives and KPIs.</p>
+                <p>The relationships strength across all  forms of media is underpinned by the au-  thoritative and intelligent content we help  clients deliver</p>
+              </div>
+            </div>
             <div className="sub-sect">
-              <div className="media-img-1">
-                <Image src="/images/esg-focus-1.webp" alt="ESG Focus" width={1000} height={500} />
+              <h3>Understanding</h3>
+              <div className="img-media-1">
+                <Image src="/images/slide-4.webp" alt="Understanding" width={1000} height={500} />
+              </div>
+              <div className="content">
+                <p>Commitment to understand our clients’ business models thoroughly to ensure our work is as effective and powerful as possible.</p>
+                <p>Empathy and the care displayed by our team ensures we have an in-depth comprehension of your goals</p>
+                <p>The relationships with our clients, who we genuinely see as our partners, is at the centre of all that we do.</p>
+              </div>
+            </div>
+            <div className="sub-sect">
+              <h3>Integrity</h3>
+              <div className="img-media-1">
+                <Image src="/images/contact-us-1.webp" alt="Integrity" width={1000} height={500} />
+              </div>
+              <div className="content">
+                <p>Commitment to helping our partners achieve their long-term goals.</p>
+                <p>Frankness and independence of mind are part of how we pursue the most positive outcomes for your business.</p>
+                <p>Our resolve is to always speak truthfully – to give honest advice even when it means difficult decisions have to be taken to ensure key goals are achieved.</p>
               </div>
             </div>
           </div>
         </PageLayoutV0>
 
 
-        <PageLayoutV0>
+        {/* <PageLayoutV0>
           <div className="sect page-sect-2">
             <div className="sub-sect">
               <div className="media-img-1">
@@ -63,14 +94,14 @@ export default function Home() {
               </div>
             </div>
             <div className="sub-sect">
-              <h2>We Work as an Extension of Your Team</h2>
+              <h2>Strategy. Narrative. Confidence in the room.</h2>
               <p>Our approach is rooted in partnership. We immerse ourselves in your business, align with your leadership, and work alongside your teams to deliver strategies and narratives that stand up to scrutiny and change.</p>
               <TransitionLink href="/partner-with-us" className="cta-with-shadow-1">How We Partner</TransitionLink>
             </div>
           </div>
-        </PageLayoutV0>
+        </PageLayoutV0> */}
 
-        <PageLayoutV0>
+        {/* <PageLayoutV0>
           <div className="sect page-sect-2">
             <div className="sub-sect">
               <h2>Local Insight Across Africa. Global Reach Beyond It.</h2>
@@ -83,7 +114,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </PageLayoutV0>
+        </PageLayoutV0> */}
     </>
   );
 }

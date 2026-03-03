@@ -88,11 +88,15 @@ const HeroSliderV0Wrapper = styled.div`
       height: 100%;
       position: absolute;
       top: 0; left: 0;
-      // display: none;
       display: flex;
       inset: 0;
       opacity: 0;
       pointer-events: none;
+
+      -webkit-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+      -moz-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+      -ms-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
 
       .info-box {
         height: 100%;
@@ -183,6 +187,8 @@ const HeroSliderV0Wrapper = styled.div`
       pointer-events: auto;
     }
 
+    
+
     @media all and (min-width: 768px) {
       .slider-item {
 
@@ -250,6 +256,8 @@ const HeroSliderV0Wrapper = styled.div`
       background: #fff5;
       cursor: pointer;
 
+      border: 5px solid #fff0;
+
       -webkit-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       -moz-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       -ms-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -257,6 +265,11 @@ const HeroSliderV0Wrapper = styled.div`
     }
     button:hover {
       background: #fff;
+    }
+
+    button.active {
+      background: #fffc;
+      border: 5px solid #fff5;
     }
   }
 
