@@ -9,7 +9,7 @@ function page() {
       name: "Sophie Masipa",
       role: "CEO & Account Director",
       bio: ["Sophie Masipa is the founder and CEO of Mwungano, a Black woman-led pan-African communications consultancy operating across Anglophone, Francophone, and Lusophone markets.", "With deep experience in reputation strategy, ESG advisory, and stakeholder engagement, Sophie has advised organisations across financial services, energy, mining, telecoms, government, FMCG, and foundations. She is widely respected for her strategic insight, executive counsel, and commitment to purpose-led communications.", "Under her leadership, Mwungano has evolved into a unified consultancy integrating ESG, sports, and AI communications capabilities across Africa and beyond."],
-      image: ["/images/sophie-1.webp", "/images/sophie-2.webp"]
+      image: ["/images/sophie-5.jpg", "/images/sophie-6.jpg"]
     },
     {
       name: "Kamogelo Mogwe",

@@ -511,7 +511,13 @@ const PageLayoutV0Wrapper = styled.div`
         p{ 
           color: #222;
           font-weight: 400;
-          font-size: clamp(10px, 2vw, 16px); 
+          font-size: clamp(10px, 2vw, 16px);           
+        }
+        p:first-child {
+          font-size: clamp(15px, 3vw, 30px);
+          font-weight: 300;
+          color: #111;
+          margin-bottom: 2rem;
         }
       }
     }
