@@ -6,6 +6,13 @@ import HeroSliderV0Client from "./HeroSliderV0Client";
 function HeroSliderV0() {
   const slides = [
     {
+      title: "Where <b>Strategy</b> Meets <b>Influence</b>",
+      description: "From crisis communications to thought leadership and investor relations, we help leaders shape narratives that inspire confidence and drive action.",
+      cta: "See What We Do",
+      ctaurl: "/work",
+      mediasrc: "/images/sophie-talks-1.jpg"
+    },
+    {
       title: "Shaping Reputations That <b>Move Africa Forward</b>",
       description: "Mwungano is a Black woman-led pan-African communications consultancy built to help organisations earn trust, protect credibility, and lead conversations across Anglophone, Francophone, and Lusophone markets.",
       cta: "Explore Our Services",
@@ -35,13 +42,7 @@ function HeroSliderV0() {
       ctaurl: "/work",
       mediasrc: "/images/slide-4.webp"
     },
-    {
-      title: "Where <b>Strategy</b> Meets <b>Influence</b>",
-      description: "From crisis communications to thought leadership and investor relations, we help leaders shape narratives that inspire confidence and drive action.",
-      cta: "See What We Do",
-      ctaurl: "/work",
-      mediasrc: "/images/slide-5.webp"
-    }
+    
   ];
 
   return (

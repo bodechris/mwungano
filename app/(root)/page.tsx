@@ -28,7 +28,7 @@ export default function Home() {
           <div className="sect page-sect-2 reverse">
             <div className="sub-sect">
               <div className="media-img-1">
-                <Image src="/images/esg-communications-3.webp" alt="ESG Communications" width={1000} height={500} />
+                <Image src="/images/esg-communications-3-b.jpg" alt="ESG Communications" width={1000} height={500} />
               </div>
             </div>
             <div className="sub-sect">
