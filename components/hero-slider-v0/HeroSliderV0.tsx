@@ -94,21 +94,28 @@ const HeroSliderV0Wrapper = styled.div`
       opacity: 0;
       pointer-events: none;
 
+      flex-direction: column;
+      gap: 1rem;
+
       -webkit-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
       -moz-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
       -ms-transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
       transition: all 1.0s cubic-bezier(0.16, 1, 0.3, 1);
 
       .info-box {
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
+        position: relative;
+
+        background: #fff;
+
 
         padding: 1rem;
         filter: drop-shadow(#fff 5px 10px 25px);
-        position: absolute;
+        position: relative;
         top: 0; left: 0;
         z-index: 10;
 
@@ -192,7 +199,7 @@ const HeroSliderV0Wrapper = styled.div`
 
     @media all and (min-width: 768px) {
       .slider-item {
-
+        flex-direction: row;
         .info-box {
           flex: 3;
           position: relative;
